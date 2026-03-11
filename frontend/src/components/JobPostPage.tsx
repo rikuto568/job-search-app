@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
+const API_BASE_URL = process.env.REACT_APP_API_URL || "";
+
 const categories = [
   "事務",
   "営業",
@@ -32,7 +34,7 @@ const JobPostPage: React.FC = () => {
     console.log("送信するデータ:", postData);
 
     try {
-      const response = await fetch("http://localhost:3001/posts", {
+      const response = await fetch(`${API_BASE_URL}/posts`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

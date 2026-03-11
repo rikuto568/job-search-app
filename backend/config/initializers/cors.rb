@@ -7,7 +7,11 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins "https://job-search-app-six-pearl.vercel.app/search"
+    origins(
+      "http://localhost:3000",
+      "https://job-search-app-six-pearl.vercel.app",
+      /\Ahttps:\/\/job-search-[a-z0-9-]+\.vercel\.app\z/
+    )
 
     resource "*",
       headers: :any,
