@@ -1,7 +1,7 @@
 import { Job } from "../types/job";
 
 // バックエンドAPIのベースURL
-const API_BASE_URL = "http://localhost:3001";
+const API_BASE_URL = "process.env.REACT_APP_API_URL";
 
 export type PaginatedJobs = {
   posts: Job[];
