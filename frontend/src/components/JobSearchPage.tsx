@@ -234,7 +234,7 @@ const JobSearchPage: React.FC = () => {
         </aside>
         {/* ここまで、サイドバー */}
 
-        <section className="flex-1 p-6 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <section className="flex-1 p-6 pb-20 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
           <h2 className="text-xl font-bold">求人一覧</h2>
           <p className="text-xs">該当件数: {totalCount}件</p>
           {/* ここから求人カード */}
@@ -252,7 +252,7 @@ const JobSearchPage: React.FC = () => {
             </div>
           ))}
           {/* ページネーションUI ここから*/}
-          <footer className=" flex items-center justify-center gap-0 mt-4">
+          <footer className="fixed bottom-4 left-1/2 -translate-x-1/2 z-10 flex items-center justify-center gap-0 mt-4 rounded bg-white/95 px-2 py-1 shadow">
             <button
               className="px-0.5 py-0.5 rounded disabled:opacity-50 hover:bg-slate-100 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-200 transition-colors"
               disabled={currentPage === 1}
